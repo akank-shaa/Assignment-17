@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="m-2">
+
+    <script>
+        function showTable() {
+            let input1 = document.getElementById("input1").value;
+            let input2 = document.getElementById("input2").value;
+            let table = document.getElementById("table");
+            table.innerHTML = "";
+            for (let i = 1; i <= input2; i++) {
+                table.innerHTML = table.innerHTML + `<p>${input1} x ${i} = ${input1 * i}`;
+            }
+        }
+
+    </script>
+    <div class="flex m-2 gap-2">
+        <input type="number" placeholder="Kiska table?" id="input1"
+            class="border border-solid border-black rounded-md" />
+        <input type="number" placeholder="Kahan tak?" id="input2" class="border border-solid border-black rounded-md" />
+        <button class="bg-indigo-500 border border-solid rounded-md px-4 py-1" onclick="showTable()">Show Table</button>
+    </div>
+    <div id="table"></div>
+
+</body>
+
+</html>
